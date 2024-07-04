@@ -1,0 +1,185 @@
+body {
+   background-color: #caebf2;
+   font-family: 'Noto Sans', sans-serif;
+ }
+ 
+ .container > div {
+   margin: 20px auto;
+ }
+ 
+ hr {
+   border: 0;
+   height: 1px;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+ }
+ 
+h1, h2, h3, h4 {
+   font-family: 'Roboto Mono', monospace;
+ }
+ 
+.quote{
+    /*CSS SELECTORS
+     the period before the quote is known as a class selector as 
+    it selects a particular gruop of elemente with the given class name.
+    ELEMENT selector ,,example p{} which styles all the paragrgh elements on apage
+    ID selector -it is similar to a class selector only that here we use the 
+    id attribute  and in css is written after a hash or pound sign */
+    font-weight: bold;
+    font-style: italic;
+}
+/*CSS GRID It is usedto structure parts of your webpage in agrid so
+ that you can organize and control your page layout the display grid tell the browser 
+ that this is a grid container* the auto dimensions makes our grid flexible and assymetric
+  depending on the content we put inside*/
+ .grid-table{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+ }
+ 
+ .container{
+    max-width: 800px;
+    margin: 0 auto;
+ }
+ .intro{
+    text-align: center;
+ }
+ .about-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* makes the lists centered and split iin between */
+ }
+ .i-do, .i-like{
+    text-align: center;
+    text-decoration: none;
+ }
+ .about-list{
+    list-style: none;
+    padding: 0;
+ }
+ /* MEDIA RESPONSIVENESS AND MEDIA QURIES
+A media query is a conditional block of CSS code that only runs
+ inside if the condition in the media query is met */
+.grid{
+   display: grid;
+   grid-template-columns: 100%;
+}
+@media(min-width:600px) {
+   /* the condition we are using here is min width in that the 
+   code runs if the width is atleats the spec num so if the screen is more than 
+   600px it will use 2 cols and if above 900 3 cols the 600 and 900 are reffered to as breakpoints*/
+   .grid{
+       grid-template-columns: 50% 50%;
+   }
+   
+}
+@media (min-width: 900px){
+.grid{ grid-template-columns: 1fr 1fr 1fr;}
+}
+   
+
+@media(max-width:480px){ 
+   /* This makes the about me lists to be on top of each other 
+   on devices with screens below 480 */
+   .about-grid{
+      grid-template-columns: 100%;
+   }
+}
+.projects-heading{
+   text-align: center;
+}
+.projects-grid{ 
+   /* here the code makes the projects images to be displayed 2by2 on a destop
+   and 4by4 on amobile device */
+   display: grid;
+   grid-template-columns: 50% 50%;
+}
+
+
+@media(max-widht:650px){
+   .projects-grid{
+      grid-template-columns: 100%;
+   }
+}
+.links-and-contacts{
+   display: grid;
+   grid-template-columns: 30% 70%;
+}
+
+.links-list{
+   list-style: none;
+   padding: 0;
+}
+@media(max-width:650px){
+   .links-and-contacts{
+      grid-template-columns: 100%;
+   }
+}
+.profile-picture {
+   border-radius: 50%;
+   width: 150px;
+   height: 150px;
+   box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+   transition: all ease-in-out .2s;
+ }
+ 
+ .profile-picture:hover {
+   box-shadow: 0 8px 12px 0 rgba(34,60,80,.16);
+ }
+ .project-image {
+	border-radius: 5px;
+	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+	transition: all ease-in-out .2s;
+}
+
+.project-image:hover {
+	filter: brightness(.75);
+	box-shadow: 0 8px 12px 0 rgba(34, 60, 80, .16);
+}
+ .project-image-wrapper {
+	justify-self: center;
+	padding: 4%;
+	position: relative;
+}
+
+.project-image-wrapper:hover > h4 {
+	visibility: visible;
+}
+
+.project-image-wrapper > h4 {
+	position: absolute;/*can either be relative or absolute ,,absolute positions 
+   an element relative to the parent with a position relative,that is the parent with a position
+   relative becomes a ref pointand the absolute child is thus arranged relative to parent*/
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+   /*translate x,y moves an element x%along x axis and y%along y axis this is helpful when  centering a cchild e
+   lement inside a parent*/
+	color: white;
+	visibility: hidden;/*shows or hides an element*/
+	z-index: 2;
+   /*this is all about the stacking order.If two elements overlap each other,the element with a higher z index wil 
+   appear on top of the one with a lower zindex*/
+	transition: all ease-in-out .2s;
+}
+form input, textarea {
+	padding: 5px;
+	border-radius: 5px;
+	width: 240px;
+}
+
+form {
+	width: 250px;
+	margin: 0 auto;
+}
+
+form input[type="submit"] {
+	width: 250px;
+}
+
+.submit-button-wrapper {
+	margin: 20px 0;
+}
+ 
+ 

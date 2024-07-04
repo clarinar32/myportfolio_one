@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>educational website</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="potfolio.css">
+</head>
+<body > 
+    <div class="container">
+    <div class="intro">
+    <img class="profile-picture" src="img/brain.jpg" alt="" height="150">
+    <h1> CLaris Mukhwana</h1>
+    <h3>junior MIT developer</h3>
+    <p  class="quote">enjoy your coding journey</p>
+    <!-- classes are a basic identifier used to define particular 
+    styles for all the elements that share the same class name. -->
+    </div>
+    <hr>
+<div class="about-grid">
+    <div class="i-like">
+        <h3> I like to</h3>
+        <ul class="about-list">
+            <li>Read novels  </li>
+            <li>listen to music  </li>
+            <li>travelling  </li> 
+        </ul>
+    </div>
+    <div class="i-do">
+        <h3>what i do</h3>
+        <ul class="about-list">
+            <li>code</li>
+            <li>sing</li>
+            <li>talk to freinds</li>
+        </ul>
+    </div>
+</div>
+<hr>
+<div>
+    <h3 class="projects-heading"> My portfolio</h3>
+    <div class="projects-grid">
+    <!-- <img class="project-image" src="img/stetho2.jpg"alt="" height="300" width="300">
+    <img class="project-image"  src="img/heart.jpg" alt=""height="300" width="300">
+    <img class="project-image" src="img/heart.png" alt=""height="300" width="300">
+    <img class="project-image" src="img/stuthe.jpeg" alt=""height="300" width="300"> -->
+    
+      <div class="project-image-wrapper">
+        <h4>Project 1</h4>
+        <img class="project-image" src="img/stetho2.jpg"alt="" height="300" width="300">
+    </div>
+    <div class="project-image-wrapper">
+        <h4>Project 2</h4>
+        <img class="project-image" src="img/heart.jpg"alt="" height="300" width="300">
+    </div>
+    <div class="project-image-wrapper">
+        <h4>Project 3</h4>
+        <img class="project-image" src="img/heart.png"alt="" height="300" width="300">
+    </div>
+    <div class="project-image-wrapper">
+        <h4>Project 4</h4>
+        <img class="project-image" src="img/stuthe.jpeg"alt="" height="300" width="300">
+    </div>
+   </div>
+</div>
+
+<div class="links-and-contacts">
+<div class="links">
+    <h3>My links</h3>
+    <ul class="links-list">
+        <li><a href="https://github.com">github</a></li>
+        <li><a href="https://github.com">github</a></li>
+        <li><a href="https://github.com">github</a></li>
+    </ul>
+</div>
+<br>
+
+<div>
+    <!-- divisions and spans are basically boxes that help us arrange text and images nicely on a web page -->
+    <form action="#"> 
+         <!-- the action attribute is the location for data to be sentaction here is # since we dont want data to be sent anywhere -->
+        <label for="email">
+            <!-- label marks the label for an input element .it can be the text next to the input fields or an icon.the for attribute
+            takes in the id attribute of the enclosed input element -->
+            <h4>Email</h4>
+            <input type="email" id="email" placeholder="Enter your email" />
+        </label>
+        <br>
+        <label for="message">
+            <!-- message:<input type="text"
+            id="message" placeholder="leave your message here"/> -->
+            <h4>Message</h4>
+            <textarea id="message">Your Message</textarea>
+        </label> 
+        <div class="submit-button-wrapper">
+            <input type="submit" valid="Send Message" id="submit-button" />
+        </div>
+        </form>
+    </div>
+    
+</div>
+<div class="grid-table">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+
+</div>
+</div>
+<script src="index.js"></script>
+</body>
+
+</html>
